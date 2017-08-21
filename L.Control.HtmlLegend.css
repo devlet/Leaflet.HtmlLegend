@@ -49,7 +49,8 @@
     background: #F6F6F6;
 }
 
-.leaflet-html-legend h4 > span {
+.leaflet-html-legend h4 > span,
+.leaflet-html-legend h3 > span {
     margin-left: 18px;
     color: #333;
 }
@@ -130,7 +131,8 @@
     left: 0.25em;
 }
 
-.leaflet-html-legend h4.closed .legend-caret:before {
+.leaflet-html-legend h4.closed .legend-caret:before,
+.leaflet-html-legend h3.closed .legend-caret:before {
     border-left: 0.5em solid #555;
     border-top: 0.5em solid transparent;
     border-bottom: 0.5em solid transparent;
@@ -255,4 +257,34 @@
 .leaflet-html-legend .visibility-toggle.disabled {
     color: #666;
     opacity: 0.5;
+}
+
+/* expand/collapse for the whole legend control */
+.leaflet-html-legend .legend-block.closed {
+    visibility: hidden;
+    display: none;
+}
+
+.leaflet-html-legend i.fa-window-close {
+    float: right;
+    font-size: 16px;
+}
+
+.leaflet-control-legend-toggle i {
+    font-size: 20px;
+}
+
+a.leaflet-control-techical-note-toggle {
+    border-bottom: initial;
+}
+
+.leaflet-control-legend-toggle.closed {
+    visibility: hidden;
+    display: none;
+}
+
+.leaflet-html-legend.closed {
+    width: 28px;
+    height: 17px;
+    overflow: hidden;
 }

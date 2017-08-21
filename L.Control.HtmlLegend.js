@@ -1,5 +1,7 @@
 L.Control.HtmlLegend = L.Control.extend({
     _map: null,
+    _legendTitle: null,
+    _toggler: null,
     _activeLayers: 0,
     _alwaysShow: false,
     options: {
@@ -8,6 +10,7 @@ L.Control.HtmlLegend = L.Control.extend({
         collapseSimple: false,  // if true, legend entries that are from a simple renderer will use compact presentation
         detectStretched: false,  // if true, will test to see if legend entries look stretched; these are usually in sets of 3 with the middle element having no label.
         collapsedOnInit: false,  // if true, legends will be collapsed when a new instance is initialized.
+        collapsed: false, // if true, the whole control will be collpased by default
         defaultOpacity: 1,
         visibleIcon: 'leaflet-html-legend-icon-eye',
         hiddenIcon: 'leaflet-html-legend-icon-eye-slash',
@@ -16,7 +19,7 @@ L.Control.HtmlLegend = L.Control.extend({
 
     onAdd: function (map) {
         this._map = map;
-        this._container = L.DomUtil.create('div', 'leaflet-control leaflet-bar leaflet-html-legend');
+        this._container = L.DomUtil.create('div', this.options.collapsed == true ? 'leaflet-control leaflet-bar leaflet-html-legend closed' : 'leaflet-control leaflet-bar leaflet-html-legend');
 
         // Disable events on container
         L.DomEvent.disableClickPropagation(this._container);
@@ -29,8 +32,44 @@ L.Control.HtmlLegend = L.Control.extend({
         return this._container;
     },
 
+    toggle: function () {
+        if (L.DomUtil.hasClass(this._legendTitle,  'closed')) {
+          L.DomUtil.removeClass(this._container  , 'closed');
+          L.DomUtil.removeClass(this._legendTitle, 'closed');
+          L.DomUtil.addClass(this._toggler,        'closed');
+        }
+        else {
+          L.DomUtil.addClass(this._container,   'closed');
+          L.DomUtil.addClass(this._legendTitle, 'closed');
+          L.DomUtil.removeClass(this._toggler,  'closed');
+        }
+    },
+
     render: function () {
         L.DomUtil.empty(this._container);
+
+        this._toggler = L.DomUtil.create('a', 'leaflet-control-legend-toggle', this._container);
+        var button  = L.DomUtil.create('i', 'fa fa-map-signs',                 this._toggler);
+        button.setAttribute('aria-hidden', true);
+        button.setAttribute('title',       'Legend');
+
+        // Expand/collapse mechanics for the whole legend control
+        if (this.options.collapsed == true) {
+            this._legendTitle = L.DomUtil.create('h3', 'legend-title closed', this._container);
+            L.DomUtil.create('div', 'legend-caret', this._legendTitle);
+            L.DomUtil.create('span', null, this._legendTitle).innerHTML = 'Legend';
+
+            var button  = L.DomUtil.create('i', 'fa fa-window-close', this._legendTitle);
+            button.setAttribute('aria-hidden', true);
+
+            L.DomEvent.on(this._legendTitle, 'click', function () {
+                this.toggle();
+            }, this);
+
+            L.DomEvent.on(this._toggler, 'click', function () {
+                this.toggle();
+            }, this);
+        }
 
         this.options.legends.forEach(function (legend) {
             if (!legend.elements) {
