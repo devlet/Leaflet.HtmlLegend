@@ -49,7 +49,8 @@ L.Control.HtmlLegend = L.Control.extend({
         L.DomUtil.empty(this._container);
 
         this._toggler = L.DomUtil.create('a', 'leaflet-control-legend-toggle', this._container);
-        var button  = L.DomUtil.create('i', 'fa fa-map-signs',                 this._toggler);
+        //var button  = L.DomUtil.create('i', 'fa fa-map-signs',                 this._toggler);
+        var button  = L.DomUtil.create('i', 'fa fa-map-o',                     this._toggler);
         button.setAttribute('aria-hidden', true);
         button.setAttribute('title',       'Legend');
 
