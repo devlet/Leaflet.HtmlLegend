@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'leaflet-html-legend-icon';
+    font-family: 'leaflet-small-widget-icon';
     src: url(data:font/ttf;base64,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);
     font-weight: normal;
     font-style: normal;
 }
 
-[class*="leaflet-html-legend-icon"] {
-    font-family: 'leaflet-html-legend-icon' !important;
+[class*="leaflet-small-widget-icon"] {
+    font-family: 'leaflet-small-widget-icon' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -19,15 +19,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.leaflet-html-legend-icon-eye-slash:before {
+.leaflet-small-widget-icon-eye-slash:before {
     content: "\e903";
 }
 
-.leaflet-html-legend-icon-eye:before {
+.leaflet-small-widget-icon-eye:before {
     content: "\e904";
 }
 
-.leaflet-html-legend {
+.leaflet-small-widget {
     background: #FFF;
     border: 2px solid #FFF;
     padding: 6px;
@@ -38,38 +38,38 @@
 
 }
 
-.leaflet-html-legend h4 {
+.leaflet-small-widget h4 {
     margin: 0 0 4px 0;
     cursor: pointer;
     font-size: 12px;
     font-weight: bold;
 }
 
-.leaflet-html-legend h4:hover {
+.leaflet-small-widget h4:hover {
     background: #F6F6F6;
 }
 
-.leaflet-html-legend h4 > span,
-.leaflet-html-legend h3 > span {
+.leaflet-small-widget h4 > span,
+.leaflet-small-widget h3 > span {
     margin-left: 18px;
     color: #333;
 }
 
-.leaflet-html-legend h4.closed + .legend-elements {
+.leaflet-small-widget h4.closed + .legend-elements {
     display: none;
 }
 
-.leaflet-html-legend .legend-elements {
+.leaflet-small-widget .legend-elements {
     padding-left: 5px;
 }
 
-.leaflet-html-legend .symbol {
+.leaflet-small-widget .symbol {
     margin-right: 6px;
     display: inline-flex;
     vertical-align: middle;
 }
 
-.leaflet-html-legend label {
+.leaflet-small-widget label {
     max-width: 200px;
     display: inline-block;
     vertical-align: middle;
@@ -92,23 +92,23 @@
 }
 
 /* force OSX to show a scrollbar */
-.leaflet-html-legend::-webkit-scrollbar {
+.leaflet-small-widget::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 7px;
 }
 
-.leaflet-html-legend::-webkit-scrollbar-thumb {
+.leaflet-small-widget::-webkit-scrollbar-thumb {
     border-radius: 4px;
     background-color: rgba(0, 0, 0, .5);
     -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }
 
-.leaflet-html-legend::-webkit-scrollbar-thumb:hover {
+.leaflet-small-widget::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* from http://lugolabs.com/caret */
-.leaflet-html-legend .legend-caret {
+.leaflet-small-widget .legend-caret {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -116,7 +116,7 @@
     left: 0;
 }
 
-.leaflet-html-legend .legend-caret:before {
+.leaflet-small-widget .legend-caret:before {
     content: '';
     position: absolute;
     top: -2px;
@@ -126,37 +126,37 @@
     border-right: 0.5em solid transparent;
 }
 
-.leaflet-html-legend h4.closed .legend-caret {
+.leaflet-small-widget h4.closed .legend-caret {
     top: 0.25em;
     left: 0.25em;
 }
 
-.leaflet-html-legend h4.closed .legend-caret:before,
-.leaflet-html-legend h3.closed .legend-caret:before {
+.leaflet-small-widget h4.closed .legend-caret:before,
+.leaflet-small-widget h3.closed .legend-caret:before {
     border-left: 0.5em solid #555;
     border-top: 0.5em solid transparent;
     border-bottom: 0.5em solid transparent;
 }
 
 /* opacity slider */
-.leaflet-html-legend .slider-label {
+.leaflet-small-widget .slider-label {
     font-size: 0.8em;
     margin-right: 10px;
 }
 
-.leaflet-html-legend .opacity-slider {
+.leaflet-small-widget .opacity-slider {
     display: inline-flex;
     padding: 4px;
     font-size: 14px;
     margin-top: 5px;
 }
 
-.leaflet-html-legend .opacity-slider .icon {
+.leaflet-small-widget .opacity-slider .icon {
     margin: 0 3px;
     font-size: 0.8em;
 }
 
-.leaflet-html-legend .opacity-slider input[type=range] {
+.leaflet-small-widget .opacity-slider input[type=range] {
     -webkit-appearance: none;
     width: 50%;
     cursor: ew-resize;
@@ -167,11 +167,11 @@
     -moz-transform: translateY(-0.3em);
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]:focus {
+.leaflet-small-widget .opacity-slider input[type=range]:focus {
     outline: none;
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]::-webkit-slider-runnable-track {
+.leaflet-small-widget .opacity-slider input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 5px;
     animate: 0.2s;
@@ -179,7 +179,7 @@
     border: none;
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]::-webkit-slider-thumb {
+.leaflet-small-widget .opacity-slider input[type=range]::-webkit-slider-thumb {
     border: 0px solid #000000;
     height: 12px;
     width: 12px;
@@ -189,11 +189,11 @@
     margin-top: -3.6px;
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]:focus::-webkit-slider-runnable-track {
+.leaflet-small-widget .opacity-slider input[type=range]:focus::-webkit-slider-runnable-track {
     background: #ddd;
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]::-moz-range-track {
+.leaflet-small-widget .opacity-slider input[type=range]::-moz-range-track {
     width: 100%;
     height: 5px;
     animate: 0.2s;
@@ -201,7 +201,7 @@
     border: none;
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]::-moz-range-thumb {
+.leaflet-small-widget .opacity-slider input[type=range]::-moz-range-thumb {
     border: none;
     height: 12px;
     width: 12px;
@@ -210,7 +210,7 @@
 
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]::-ms-track {
+.leaflet-small-widget .opacity-slider input[type=range]::-ms-track {
     width: 100%;
     height: 5px;
     animate: 0.2s;
@@ -220,17 +220,17 @@
     color: transparent;
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]::-ms-fill-lower {
+.leaflet-small-widget .opacity-slider input[type=range]::-ms-fill-lower {
     background: #ddd;
     border: none;
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]::-ms-fill-upper {
+.leaflet-small-widget .opacity-slider input[type=range]::-ms-fill-upper {
     background: #ddd;
     border: none;
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]::-ms-thumb {
+.leaflet-small-widget .opacity-slider input[type=range]::-ms-thumb {
     border: 0px solid #000000;
     height: 12px;
     width: 12px;
@@ -239,33 +239,33 @@
 
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]:focus::-ms-fill-lower {
+.leaflet-small-widget .opacity-slider input[type=range]:focus::-ms-fill-lower {
     background: #ddd;
 }
 
-.leaflet-html-legend .opacity-slider input[type=range]:focus::-ms-fill-upper {
+.leaflet-small-widget .opacity-slider input[type=range]:focus::-ms-fill-upper {
     background: #ddd;
 }
 
-.leaflet-html-legend .visibility-toggle {
+.leaflet-small-widget .visibility-toggle {
     position: absolute;
     top: 5px;
     right: 10px;
     cursor: pointer;
 }
 
-.leaflet-html-legend .visibility-toggle.disabled {
+.leaflet-small-widget .visibility-toggle.disabled {
     color: #666;
     opacity: 0.5;
 }
 
 /* expand/collapse for the whole legend control */
-.leaflet-html-legend .legend-block.closed {
+.leaflet-small-widget .legend-block.closed {
     visibility: hidden;
     display: none;
 }
 
-.leaflet-html-legend i.fa-window-close {
+.leaflet-small-widget i.fa-window-close {
     float: right;
     font-size: 16px;
 }
@@ -283,7 +283,7 @@ a.leaflet-control-techical-note-toggle {
     display: none;
 }
 
-.leaflet-html-legend.closed {
+.leaflet-small-widget.closed {
     width: 28px;
     height: 17px;
     overflow: hidden;
