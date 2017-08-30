@@ -4,6 +4,9 @@ A simple Leaflet plugin for creating legends with HTML.
 
 *Tested with Leaflet 1.1.0*
 
+This is a forked version from [consbio/Leaflet.HtmlLegend](https://github.com/consbio/Leaflet.HtmlLegend)
+but using [Leaflet.SmallWidget](https://gitlab.com/socioambiental/Leaflet.SmallWidget) as dependency.
+
 ## Install
 
 From NPM:
