@@ -26,7 +26,7 @@ L.Control.HtmlLegend = L.Control.SmallWidget.extend({
 
     // Control title
     this._legendTitle = L.DomUtil.create('h3', this.options.collapsed == true ? 'legend-title closed' : 'legend-title', this._container);
-    L.DomUtil.create('div', 'legend-caret', this._legendTitle);
+    //L.DomUtil.create('div', 'legend-caret', this._legendTitle);
     L.DomUtil.create('span', null, this._legendTitle).innerHTML = 'Legend';
 
     this.options.legends.forEach(function (legend) {
