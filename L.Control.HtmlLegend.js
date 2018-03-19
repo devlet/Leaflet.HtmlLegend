@@ -111,7 +111,19 @@ L.Control.HtmlLegend = L.Control.SmallWidget.extend({
       return
     }
 
-    var opacity = layer.opacity || this.options.defaultOpacity || 1;
+    if (layer.opacity) {
+      var opacity = layer.opacity;
+    }
+    else if (layer.options != undefined && layer.options.opacity) {
+      var opacity = layer.options.opacity;
+    }
+    else if (this.options.defaultOpacity) {
+      var opacity = this.options.defaultOpacity;
+    }
+    else {
+      var opacity = 1;
+    }
+
     this._updateOpacity(layer, opacity);
 
     if (this._map.hasLayer(layer)) {
